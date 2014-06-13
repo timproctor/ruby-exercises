@@ -30,13 +30,13 @@ class Wallet
     @coins << coin
   end
 
-  # def take(*coins)
-  #   coins.each do |coin|
-  #     if idx = @coins.find_index(coin)
-  #       @coins.delete_at(idx)
-  #     end
-  #   end
-  # end
+  def take(*cgoins)
+    coins.each do |coin|
+      if index = @coins.find_index(coin)
+        @coins.delete_at(index)
+      end
+    end
+  end
 end
 # wallet = Wallet.new
 # 3.times { wallet << :penny }
